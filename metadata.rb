@@ -5,7 +5,9 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache-2.0'
 description 'Installs and configures Chef Server 12'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-depends 'chef-ingredient', '>= 2.1.10'
+
+# Check Berksfile for deps
+depends 'chef-ingredient'
 
 supports 'redhat'
 supports 'centos'

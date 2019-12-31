@@ -21,5 +21,6 @@ node['chef-server']['addons'].each do |addon, ver|
     accept_license node['chef-server']['accept_license']
     notifies :reconfigure, "chef_ingredient[#{addon}]"
     version ver unless ver.nil?
+    platform_version_compatibility_mode node['chef-server']['platform_version_compatibility_mode']
   end
 end
